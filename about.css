@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+ 
+}
+body {
+  font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background : url("https://media4.giphy.com/media/2csuIJj6TmuKA/giphy.webp?cid=ecf05e47z9ebxwun88qmxkjzt87a01ckho73w1nuvl4039nb&rid=giphy.webp");
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+color: black;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #000000;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: darkgreen;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+}
+
+.word{
+  text-align: center;
+}
+
+video{
+  height: 700px;
+  width: 800px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+h1{
+color: white;
+animation: animate 1.5s linear infinite;
+background: linear-gradient(135deg, #5f0404, #000000, #100169);
+}
+
+p{
+    color: white;
+    font-family: 'Grandstander', cursive;
+    background-color: black;
+}
+
+.to-top{
+	color:white;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:white;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▼';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color: lightseagreen;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+h3{
+  font-size: 20px;
+}
